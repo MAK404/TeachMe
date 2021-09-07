@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+
+    app:cardUseCompatPadding="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DBDFF8"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/sname"
+
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/smail"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:layout_marginBottom="8dp"
+
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_below="@+id/sname"/>
+        <TextView
+            android:id="@+id/smobile"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_below="@+id/smail"/>
+        <TextView
+            android:id="@+id/scity"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_below="@+id/smobile"/>
+        <TextView
+            android:id="@+id/srating"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_below="@+id/scity"/>
+
+        <TextView
+            android:id="@+id/showdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Show Details"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="#DD1E5F"
+            android:layout_below="@+id/srating"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

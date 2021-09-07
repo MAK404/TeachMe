@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teachme">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TeachMe">
+        <activity android:name=".giverating"></activity>
+        <activity android:name=".waitingtutors" />
+        <activity android:name=".userdeleted" />
+        <activity android:name=".waitingstudent" />
+        <activity android:name=".approval" />
+        <activity android:name=".showdetails" />
+        <activity android:name=".showyesbyme" />
+        <activity android:name=".edittutor" />
+        <activity android:name=".tutorprofile" />
+        <activity android:name=".editstudent" />
+        <activity android:name=".studentprofile" />
+        <activity android:name=".resubmitid" />
+        <activity android:name=".accepteddetails" />
+        <activity android:name=".studentidproof" />
+        <activity android:name=".tutoridproof" />
+        <activity android:name=".showtutors" />
+        <activity android:name=".showstudents" />
+        <activity android:name=".adminwindow" />
+        <activity android:name=".acceptedreq" />
+        <activity android:name=".sendboth" />
+        <activity android:name=".sendoffline" />
+        <activity android:name=".sendonline" />
+        <activity android:name=".studentdetails" />
+        <activity
+            android:name=".studentrequests"
+            android:theme="@style/Theme2.TeachMe" />
+        <activity android:name=".tutorafterlogin" />
+        <activity android:name=".tutordetails" />
+        <activity
+            android:name=".findtutors"
+            android:theme="@style/Theme2.TeachMe" />
+        <activity android:name=".studentafterlogin" />
+        <activity android:name=".studentasuser" />
+        <activity android:name=".studentupload" />
+        <activity android:name=".pleaseLogin" />
+        <activity android:name=".tutorUpload" />
+        <activity android:name=".registerstudent" />
+        <activity android:name=".registeris" />
+        <activity android:name=".tutorAsUser" />
+        <activity android:name=".registertutor" />
+        <activity android:name=".registerit" />
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

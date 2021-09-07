@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/maind"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Online Details"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:id="@+id/wn"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+     android:layout_marginBottom="15dp"
+                android:drawableStart="@drawable/whatsapp"
+
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="WhatsApp"
+                android:inputType="text"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/em"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/roundborder2"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="16dp"
+
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+            <EditText
+                android:id="@+id/mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/roundborder2"
+
+                android:drawableStart="@drawable/meet"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Meeting ID"
+                android:inputType="text"
+                android:padding="16dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Offline Details"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:id="@+id/mno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:layout_marginBottom="15dp"
+                android:drawableStart="@drawable/phone"
+
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/address"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Complete Address"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/land"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/landmark"
+
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Landmark"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/roundborder2"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/time"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black"
+        android:ems="10"
+     android:layout_marginBottom="15dp"
+        android:hint="Timing Schedule Desctiption"
+        android:inputType="textMultiLine"
+        android:padding="16dp" />
+
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginEnd="32dp"
+
+        android:background="@drawable/round_bg"
+        android:onClick="onClick"
+        android:text="Send Details"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

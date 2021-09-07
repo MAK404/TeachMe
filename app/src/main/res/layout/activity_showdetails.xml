@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/maind"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Online Details"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/wn"
+                android:textColor="@color/black"
+                android:text="WhatsApp: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+                android:layout_marginBottom="15dp"
+                android:drawableStart="@drawable/whatsapp"
+
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="WhatsApp"
+                android:inputType="text"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/em"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/roundborder2"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="16dp"
+                android:textColor="@color/black"
+                android:text="Mail: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+            <TextView
+                android:id="@+id/mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:text="Meet ID: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/meet"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Meeting ID"
+                android:inputType="text"
+                android:padding="16dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Offline Details"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/mno2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+                android:layout_marginBottom="15dp"
+                android:drawableStart="@drawable/phone"
+                android:textColor="@color/black"
+                android:text="MNo: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:text="Address: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/address"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Complete Address"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/land"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundborder2"
+                android:textColor="@color/black"
+                android:text="Landmark: "
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/landmark"
+
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Landmark"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/roundborder2"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/time"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black"
+        android:text="Schedule: "
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:layout_marginBottom="15dp"
+        android:hint="Timing Schedule Desctiption"
+        android:inputType="textMultiLine"
+        android:padding="16dp" />
+
+
+</LinearLayout>
