@@ -2,10 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:padding="20dp">
 
         <LinearLayout
@@ -54,7 +61,7 @@
                 android:textSize="17dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:background="@drawable/roundborder2"
                 android:layout_marginBottom="15dp"
                 android:drawableStart="@drawable/whatsapp"
@@ -62,13 +69,13 @@
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="WhatsApp"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:padding="16dp" />
 
             <TextView
                 android:id="@+id/em"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/roundborder2"
                 android:drawableStart="@drawable/ic_email"
@@ -80,15 +87,15 @@
 
                 android:ems="10"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:inputType="textMultiLine"
                 android:padding="16dp" />
             <TextView
                 android:id="@+id/mid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/roundborder2"
-                android:textColor="@color/black"
+                android:textColor="#13B4FD"
                 android:text="Meet ID: "
                 android:textSize="17dp"
                 android:layout_gravity="center"
@@ -96,14 +103,14 @@
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="Meeting ID"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:padding="16dp" />
 
         </LinearLayout>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="299dp"
+        android:layout_height="wrap_content"
         android:padding="20dp">
 
         <LinearLayout
@@ -148,7 +155,7 @@
             <TextView
                 android:id="@+id/mno2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:background="@drawable/roundborder2"
                 android:layout_marginBottom="15dp"
                 android:drawableStart="@drawable/phone"
@@ -159,7 +166,7 @@
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="Mobile Number"
-                android:inputType="textEmailAddress"
+                android:inputType="textMultiLine"
                 android:padding="16dp" />
 
             <TextView
@@ -179,31 +186,32 @@
                 android:layout_marginBottom="15dp"
                 android:padding="16dp" />
 
+
             <TextView
                 android:id="@+id/land"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/roundborder2"
-                android:textColor="@color/black"
-                android:text="Landmark: "
-                android:textSize="17dp"
+                android:layout_height="90dp"
                 android:layout_gravity="center"
+                android:background="@drawable/roundborder2"
                 android:drawableStart="@drawable/landmark"
-
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="Landmark"
-                android:inputType="textEmailAddress"
-                android:padding="16dp" />
 
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:text="Landmark: "
+                android:textColor="@color/black"
+                android:textSize="17dp" />
 
         </LinearLayout>
 
     </RelativeLayout>
-    <TextView
+
+            <TextView
         android:id="@+id/schedule"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="90dp"
         android:background="@drawable/roundborder2"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -219,5 +227,6 @@
         android:inputType="textMultiLine"
         android:padding="16dp" />
 
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

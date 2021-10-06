@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,9 +56,12 @@ public class accepteddetails extends AppCompatActivity {
         schedule=findViewById(R.id.schedule);
         taddress=getIntent().getStringExtra("taddress");
         tem=getIntent().getStringExtra("tem");
-        tid=getIntent().getStringExtra("tid");
+         tid=getIntent().getStringExtra("tid");
+       // tid="https://www.google.com/";
         tland=getIntent().getStringExtra("tland");
         tmid=getIntent().getStringExtra("tmid");
+
+        //tmid="https://www.google.com/";
         tname=getIntent().getStringExtra("tname");
         tmno2=getIntent().getStringExtra("tmno");
         tschedule=getIntent().getStringExtra("tschedule");
@@ -82,14 +86,21 @@ public class accepteddetails extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value.getString("tmode").contentEquals("Online")) {
+
+                    if(tmid.charAt(0)!='h')
+                    {
+                        tmid="https://"+tmid;
+                    }
+
                     wno.setText(wno.getText()+twno);
                     mid.setText(mid.getText()+tmid);
                     em1.setText(em1.getText()+tem);
 
-                    schedule.setText(nan);
+                    schedule.setText(schedule.getText()+tschedule);
                     mno2.setText(nan);
                     land.setText(nan);
                     address.setText(nan);
+
                 }
                 else if(value.getString("tmode").contentEquals("Offline"))
                 {
@@ -101,9 +112,15 @@ public class accepteddetails extends AppCompatActivity {
                     wno.setText(nan);
                     mid.setText(nan);
                     em1.setText(nan);
+                    mid.setEnabled(false);
                 }
                 else if(value.getString("tmode").contentEquals("Both"))
                 {
+                    if(tmid.charAt(0)!='h')
+                    {
+                        tmid="https://"+tmid;
+                    }
+
                     wno.setText(wno.getText()+twno);
                     mid.setText(mid.getText()+tmid);
                     em1.setText(em1.getText()+tem);
@@ -130,6 +147,18 @@ btnrating.setOnClickListener(new View.OnClickListener() {
 // set the new task and clear flags
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
+
+    }
+});
+mid.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        gotoUrl(tmid);
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 });
     }

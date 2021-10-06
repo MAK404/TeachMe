@@ -20,6 +20,8 @@ public class myadaptor4 extends RecyclerView.Adapter<myadaptor4.myviewholder> {
 
 
     ArrayList<model4> datalist;
+
+
     public myadaptor4(ArrayList<model4> datalist) {
         this.datalist = datalist;
     }
@@ -61,8 +63,10 @@ public class myadaptor4 extends RecyclerView.Adapter<myadaptor4.myviewholder> {
 
             }
         });
-
-
+//if(getItemCount()==0)
+//{
+//    Intent = new Intent(,adminwindow.class);
+//}
     }
 
     @Override

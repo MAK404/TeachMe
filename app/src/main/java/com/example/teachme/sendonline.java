@@ -33,7 +33,7 @@ String sid,tid,tmode,tname,tmail;
 Button send;
 FirebaseAuth fauth;
 FirebaseFirestore fstore;
-boolean flag1,flag2;
+boolean flag1=false,flag2=false,flag3=false;
 Map<String,Object> map1,map2,map3;
 DocumentReference ref123;
 String sname,smail,smobile,scity;
@@ -82,6 +82,8 @@ String sname,smail,smobile,scity;
                     land.setEnabled(false);
                     mno.setEnabled(false);
                     flag1=true;
+                    flag2=false;
+                    flag3=false;
                 }
                 else if(value.getString("tmode").contentEquals("Offline"))
                     {
@@ -89,7 +91,17 @@ String sname,smail,smobile,scity;
                         mid.setEnabled(false);
                         em.setEnabled(false);
                        flag2=true;
+                       flag1=false;
+                       flag3=false;
                     }
+                else if(value.getString("tmode").contentEquals("Both"))
+                {
+
+                    flag3=true;
+                    flag1=false;
+                    flag2=false;
+                }
+
 
             }
         });
@@ -103,7 +115,7 @@ String sname,smail,smobile,scity;
                    update();
                 else if(flag2)
                     update2();
-                else
+                else if(flag3)
                     update3();
 //                pd.show();
 //                Handler handler = new Handler();
@@ -123,7 +135,7 @@ String sname,smail,smobile,scity;
 
     public void updatetofirebase1()
     {
-        DocumentReference documentReference = fstore.collection("users").document(sid.trim()).collection("accepted").document(tid);
+        DocumentReference documentReference = fstore.collection("users").document(sid).collection("accepted").document(tid);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -164,7 +176,7 @@ String sname,smail,smobile,scity;
 
     public void updatetofirebase2()
     {
-        DocumentReference documentReference = fstore.collection("users").document(sid.trim()).collection("accepted").document(tid);
+        DocumentReference documentReference = fstore.collection("users").document(sid).collection("accepted").document(tid);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -185,6 +197,8 @@ String sname,smail,smobile,scity;
                 map2.put("sname",sname);
                 map2.put("smobile",smobile);
                 map2.put("scity",scity);
+                map2.put("israted","0");
+
 
                 documentReference.set(map2);
                 Toast.makeText(sendonline.this, "Details Send Successfully Either Go Back or Change to Overwrite", Toast.LENGTH_SHORT).show();
@@ -202,7 +216,7 @@ String sname,smail,smobile,scity;
     }
     public void updatetofirebase3()
     {
-        DocumentReference documentReference = fstore.collection("users").document(sid.trim()).collection("accepted").document(tid);
+        DocumentReference documentReference = fstore.collection("users").document(sid).collection("accepted").document(tid);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -223,6 +237,7 @@ String sname,smail,smobile,scity;
                 map3.put("sname",sname);
                 map3.put("smobile",smobile);
                 map3.put("scity",scity);
+                map3.put("israted","0");
 
                 documentReference.set(map3);
                 Toast.makeText(sendonline.this, "Details Send Successfully Either Go Back or Change to Overwrite", Toast.LENGTH_SHORT).show();
@@ -310,5 +325,9 @@ String sname,smail,smobile,scity;
     @Override
     protected void onStart() {
         super.onStart();
+        flag1=false;
+        flag2=false;
+        flag3=false;
+
     }
 }

@@ -3,7 +3,10 @@ package com.example.teachme;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -59,14 +62,22 @@ public class showdetails extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value.getString("tmode").contentEquals("Online")) {
+
+                    if (tmid.charAt(0) != 'h') {
+                        tmid = "https://" + tmid;
+                    }
+
                     wno.setText(wno.getText()+twno);
                     mid.setText(mid.getText()+tmid);
                     em1.setText(em1.getText()+tem);
 
-                    schedule.setText(nan);
+                    schedule.setText(schedule.getText()+tschedule);
                     mno2.setText(nan);
                     land.setText(nan);
                     address.setText(nan);
+                    if (tmid.charAt(0) != 'h') {
+                        tmid = "https://" + tmid;
+                    }
                 }
                 else if(value.getString("tmode").contentEquals("Offline"))
                 {
@@ -74,23 +85,40 @@ public class showdetails extends AppCompatActivity {
                     mno2.setText(mno2.getText()+tmno2);
                     land.setText(land.getText()+tland);
                     address.setText(address.getText()+taddress);
-
+mid.setEnabled(false);
                     wno.setText(nan);
                     mid.setText(nan);
                     em1.setText(nan);
                 }
                 else if(value.getString("tmode").contentEquals("Both"))
-                { wno.setText(wno.getText()+twno);
+                { if (tmid.charAt(0) != 'h') {
+                    tmid = "https://" + tmid;
+                }
+
+
+                    wno.setText(wno.getText()+twno);
                     mid.setText(mid.getText()+tmid);
                     em1.setText(em1.getText()+tem);
                     schedule.setText(schedule.getText()+tschedule);
                     mno2.setText(mno2.getText()+tmno2);
                     land.setText(land.getText()+tland);
                     address.setText(address.getText()+taddress);
+
                 }
 
             }
         });
+        mid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoURL(tmid);
+            }
+        });
 
+    }
+
+    private void gotoURL(String tmid) {
+        Uri uri = Uri.parse(tmid);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

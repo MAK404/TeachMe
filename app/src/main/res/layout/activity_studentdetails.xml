@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="558dp"
+        android:layout_height="600dp"
         android:padding="20dp">
 
         <LinearLayout
@@ -78,13 +78,13 @@
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/roundborder2"
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:inputType="textMultiLine"
 
                 android:padding="16dp"
                 android:text="Pin/City/State: "
@@ -110,14 +110,14 @@
             <TextView
                 android:id="@+id/tv4"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
 
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/roundborder2"
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="WhatsApp"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:padding="16dp"
                 android:text="Mail/Mobile: "
                 android:textColor="@color/black"
@@ -133,7 +133,7 @@
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="WhatsApp"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:padding="16dp"
                 android:text="Looking for Online/Offline/Both: "
                 android:textColor="@color/black"
